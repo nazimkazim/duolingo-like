@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Duolingo</title>
-</head>
-<body>
-  <header class="header">
-    <nav class="header__navbar">
-      <ul class="header__navbar__container">
-        <li class="header__navbar__container__item logo">
-          <img src="./assets/logo-white.svg"/>
-        </li>
-        <li class="header__navbar__container__item dropdown">
-          <span>site language:english</span>
-          <span><img src="./assets/arrow-down.svg"/></span>
-        </li>
-      </ul>
-    </nav>
-    <div class="header__content">
-      <div class="header__content__info">
-        <div class="header__content__info__image_container">
-          <img src="./assets/earth-two-rings.svg"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Duolingo</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__navbar">
+        <ul class="header__navbar__container">
+          <li class="header__navbar__container__item logo">
+            <img src="./assets/logo-white.svg" />
+          </li>
+          <li class="header__navbar__container__item dropdown">
+            <span>site language:english</span>
+            <span><img src="./assets/arrow-down.svg" /></span>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__content">
+        <div class="header__content__info">
+          <div class="header__content__info__image_container">
+            <img src="./assets/earth-two-rings.svg" />
+          </div>
+          <div class="header__content__info__desc_container">
+            <span class="main_header">Learn a language for free. Forever</span>
+            <a class="header__content__button">get started</a>
+            <a class="header__content__button transparent_bordered"
+              >I already have an account</a
+            >
+          </div>
         </div>
-        <div class="header__content__info__desc_container">
-          <span class="main_header">Learn a language for free. Forever</span>
-          <a class="header__content__button">get started</a>
-          <a class="header__content__button transparent_bordered">I already have an account</a>
+        <div class="header__bottom_strip">
+          <img class="arrow-slide" src="./assets/array-point-left.svg"/>
+          <div class="header__bottom_strip_flags_container">
+          </div>
+          <img class="arrow-slide" src="./assets/array-point-right.svg"/>
         </div>
       </div>
-    </div>
-  </header>
-</body>
+    </header>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
