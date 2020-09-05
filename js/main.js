@@ -131,14 +131,33 @@ arrowSlideRight.addEventListener('click', () => {
 });
 
 // Show flags modal on hover
-dropdown.addEventListener('mouseover', () => {
-  flagsModal.style.display = 'grid';
-})
+function ShowModal(event, property) {
+  if (event === 'mouseover') {
+    dropdown.addEventListener(event, () => {
+      flagsModal.style.display = property;
+    });
+    flagsModal.addEventListener(event, () => {
+      flagsModal.style.display = property;
+    });
+  }
 
-dropdown.addEventListener('mouseleave', () => {
-  console.log('hovered')
-  flagsModal.style.display = 'none';
-})
+  else if (event === 'mouseleave') {
+    dropdown.addEventListener('mouseleave', () => {
+      //console.log('hovered')
+      flagsModal.style.display = property;
+    });
+
+    flagsModal.addEventListener('mouseleave', () => {
+      flagsModal.style.display = property;
+    });
+  }
+}
+
+ShowModal('mouseover', 'grid');
+ShowModal('mouseover', 'grid');
+ShowModal('mouseleave', 'none');
+
+
 
 
 

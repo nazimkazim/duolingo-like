@@ -270,10 +270,18 @@
 .flags-modal-item {
   display: flex;
   align-items: center;
-  width: 150px;
+  min-width: 100px;
   /* background-color: #90be6d; */
+  border-radius: 6px;
+  padding:5px;
   margin-right: 3px;
   margin-bottom: 3px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.flags-modal-item:hover {
+  background-color: #eddcd2;
 }
 
 .flags-modal-item img {
