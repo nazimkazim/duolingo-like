@@ -82,6 +82,9 @@ const flags = [
 ];
 
 const flagsContainer = document.querySelector('.header__bottom_strip_flags_container');
+const arrowSlideLeft = document.querySelector('.arrow-slide-left');
+const arrowSlideRight = document.querySelector('.arrow-slide-right');
+let scrollRange = 0;
 
 
 for (let i = 0; i < flags.length; i++) {
@@ -90,4 +93,33 @@ for (let i = 0; i < flags.length; i++) {
   flagItem.innerHTML = `<img src="${flags[i].flag}"/><span class="lang-name">${flags[i].lang}</span>`;
   flagsContainer.appendChild(flagItem);
 }
-console.log(flagsContainer);
+
+arrowSlideLeft.addEventListener('click', () => {
+  scrollRange -= 300;
+  flagsContainer.scrollTo({
+    left: scrollRange,
+    behavior: 'smooth'
+  });
+  console.log(scrollRange)
+  if (scrollRange <= 0) {
+    scrollRange = 0;
+  }
+  /* console.log('clicked left'); */
+});
+
+arrowSlideRight.addEventListener('click', () => {
+  scrollRange += 300;
+  flagsContainer.scrollTo({
+    left: scrollRange,
+    behavior: 'smooth'
+  });
+  console.log(scrollRange)
+  if (scrollRange >= 1400) {
+    scrollRange = -scrollRange;
+  }
+  /* console.log('clicked right'); */
+});
+
+
+
+
