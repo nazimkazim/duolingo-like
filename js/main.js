@@ -82,8 +82,10 @@ const flags = [
 ];
 
 const flagsContainer = document.querySelector('.header__bottom_strip_flags_container');
+const flagsModal = document.querySelector('.flags-modal');
 const arrowSlideLeft = document.querySelector('.arrow-slide-left');
 const arrowSlideRight = document.querySelector('.arrow-slide-right');
+const dropdown = document.querySelector('.dropdown');
 let scrollRange = 300;
 let scrollStart = 0;
 
@@ -93,8 +95,14 @@ for (let i = 0; i < flags.length; i++) {
   flagItem.className = "flag-item";
   flagItem.innerHTML = `<img src="${flags[i].flag}"/><span class="lang-name">${flags[i].lang}</span>`;
   flagsContainer.appendChild(flagItem);
+
+  const flagModalItem = document.createElement('div');
+  flagModalItem.className = "flags-modal-item";
+  flagModalItem.innerHTML = `<img src="${flags[i].flag}"/><span class="modal-lang-name">${flags[i].lang}</span>`;
+  flagsModal.appendChild(flagModalItem);
 }
 
+// Slide flags in header to the left
 arrowSlideLeft.addEventListener('click', () => {
   scrollStart -= scrollRange;
   flagsContainer.scrollTo({
@@ -108,18 +116,29 @@ arrowSlideLeft.addEventListener('click', () => {
   /* console.log('clicked left'); */
 });
 
+// Slide flags in header to the right
 arrowSlideRight.addEventListener('click', () => {
   scrollStart += scrollRange;
   flagsContainer.scrollTo({
     left: scrollStart,
     behavior: 'smooth'
   });
-  console.log(scrollStart);
+  //console.log(scrollStart);
   if (scrollStart >= 1400) {
     scrollStart = -scrollRange;
   }
   /* console.log('clicked right'); */
 });
+
+// Show flags modal on hover
+dropdown.addEventListener('mouseover', () => {
+  flagsModal.style.display = 'grid';
+})
+
+dropdown.addEventListener('mouseleave', () => {
+  console.log('hovered')
+  flagsModal.style.display = 'none';
+})
 
 
 
