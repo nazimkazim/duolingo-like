@@ -84,7 +84,8 @@ const flags = [
 const flagsContainer = document.querySelector('.header__bottom_strip_flags_container');
 const arrowSlideLeft = document.querySelector('.arrow-slide-left');
 const arrowSlideRight = document.querySelector('.arrow-slide-right');
-let scrollRange = 0;
+let scrollRange = 300;
+let scrollStart = 0;
 
 
 for (let i = 0; i < flags.length; i++) {
@@ -95,27 +96,27 @@ for (let i = 0; i < flags.length; i++) {
 }
 
 arrowSlideLeft.addEventListener('click', () => {
-  scrollRange -= 300;
+  scrollStart -= scrollRange;
   flagsContainer.scrollTo({
-    left: scrollRange,
+    left: scrollStart,
     behavior: 'smooth'
   });
-  console.log(scrollRange)
-  if (scrollRange <= 0) {
-    scrollRange = 0;
+  console.log(scrollStart);
+  if (scrollStart <= 0) {
+    scrollStart = 0;
   }
   /* console.log('clicked left'); */
 });
 
 arrowSlideRight.addEventListener('click', () => {
-  scrollRange += 300;
+  scrollStart += scrollRange;
   flagsContainer.scrollTo({
-    left: scrollRange,
+    left: scrollStart,
     behavior: 'smooth'
   });
-  console.log(scrollRange)
-  if (scrollRange >= 1400) {
-    scrollRange = -scrollRange;
+  console.log(scrollStart);
+  if (scrollStart >= 1400) {
+    scrollStart = -scrollRange;
   }
   /* console.log('clicked right'); */
 });
