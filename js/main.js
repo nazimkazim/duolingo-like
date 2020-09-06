@@ -86,6 +86,11 @@ const flagsModal = document.querySelector('.flags-modal');
 const arrowSlideLeft = document.querySelector('.arrow-slide-left');
 const arrowSlideRight = document.querySelector('.arrow-slide-right');
 const dropdown = document.querySelector('.dropdown');
+const seeHowWeDoIt = document.querySelector('.see-how-we-do-it');
+const modalWindow = document.querySelector('.modal-window');
+const overlay = document.querySelector('.overlay');
+const modalClose = document.querySelector('.modal-close');
+
 let scrollRange = 300;
 let scrollStart = 0;
 
@@ -156,6 +161,22 @@ function ShowModal(event, property) {
 ShowModal('mouseover', 'grid');
 ShowModal('mouseover', 'grid');
 ShowModal('mouseleave', 'none');
+
+modalWindow.style.display = 'none';
+overlay.style.display = 'none';
+
+seeHowWeDoIt.addEventListener('click', () => {
+  setTimeout(() => {
+    modalWindow.style.display = 'block';
+  }, 300);
+  
+  overlay.style.display = 'block';
+});
+
+modalClose.addEventListener('click', () => {
+  modalWindow.style.display = 'none';
+  overlay.style.display = 'none';
+})
 
 
 
