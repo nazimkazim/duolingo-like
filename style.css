@@ -312,7 +312,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 40px;
-  min-width: 1065px;
+  max-width: 1065px;
   max-height: 225px;
   border-bottom: 2px solid #d6d6d6;
   /* background-color: orangered; */
@@ -441,8 +441,8 @@ h1 {
   align-items: center;
   flex-direction: column;
   padding: 40px;
-  min-width: 1065px;
-  max-height: 225px;
+  max-width: 1065px;
+  min-height: 225px;
   border-bottom: 2px solid #d6d6d6;
 }
 
@@ -450,7 +450,7 @@ h1 {
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: #61b800;
+  /* background-color: #61b800; */
 }
 
 .duolingo-gamification-block-one-third {
@@ -460,11 +460,12 @@ h1 {
   align-items: center;
   width: 33.333333%;
   height: 100%;
-  background-color: #235390;
+  /* background-color: #235390; */
 }
 
-.duolingo-gamification-block-one-third.center {
-  padding: 10px;
+.duolingo-gamification-block-one-third.center img {
+  width: 230px;
+  margin-bottom: 40px;
 }
 
 .duolingo-gamification-block-one-third-item {
@@ -472,13 +473,38 @@ h1 {
   flex-direction: row;
   height: 50%;
   width: 100%;
-  background-color: #84dc00;
-  border-bottom: 1px solid red;
+  /* background-color: #84dc00; */
+  /* border-bottom: 1px solid red; */
+}
+
+.duolingo-gamification-block-one-third-item-info {
+  width: 100%;
+  height: 100%;
 }
 
 .duolingo-gamification-block-one-third-item img {
   display: flex;
   align-self: flex-start;
+  
+}
+
+.duolingo-gamification-block-one-third-item-info h2 {
+  font-size: 19px;
+  color: #3C3C3C;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.duolingo-gamification-block-one-third-item-info p {
+  font-size: 14px;
+  color: #777777;
+  margin-top: 10px;
+  line-height: 1.6;
+  margin-left: 10px;
+}
+
+#duolingo-gamification-title {
+  margin-bottom: 60px;
 }
 
 
