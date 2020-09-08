@@ -90,6 +90,7 @@ const seeHowWeDoIt = document.querySelector('.see-how-we-do-it');
 const modalWindow = document.querySelector('.modal-window');
 const overlay = document.querySelector('.overlay');
 const modalClose = document.querySelector('.modal-close');
+const duolingoVideo = document.getElementById("video-duolingo");
 
 let scrollRange = 300;
 let scrollStart = 0;
@@ -167,16 +168,19 @@ overlay.style.display = 'none';
 
 seeHowWeDoIt.addEventListener('click', () => {
   setTimeout(() => {
-    modalWindow.style.display = 'block';
+    modalWindow.style.display = 'flex';
   }, 300);
-  
+  duolingoVideo.setAttribute('src', 'https://www.youtube.com/embed/SUz6oBiRlxk')
   overlay.style.display = 'block';
 });
 
 modalClose.addEventListener('click', () => {
   modalWindow.style.display = 'none';
   overlay.style.display = 'none';
-})
+  duolingoVideo.setAttribute('src', '');
+});
+
+//console.log(document.getElementById("video-duolingo").removeAttribute('src'));
 
 
 

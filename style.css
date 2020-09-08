@@ -222,7 +222,7 @@ body {
 
 .flag-item .lang-name {
   font-size: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -234,11 +234,12 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .header__bottom_strip_flags_container {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-.arrow-slide-left, .arrow-slide-right {
+.arrow-slide-left,
+.arrow-slide-right {
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -247,7 +248,8 @@ body {
   /* background-color: #61b800; */
 }
 
-.arrow-slide-left img, .arrow-slide-right img {
+.arrow-slide-left img,
+.arrow-slide-right img {
   width: 25px;
 }
 
@@ -257,13 +259,13 @@ body {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   position: absolute;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 16px;
   padding: 10px;
   z-index: 10;
-  min-width:400px;
+  min-width: 400px;
   min-height: 400px;
-  top: calc( var(--header-nav-height) - 10px);
+  top: calc(var(--header-nav-height) - 10px);
   right: 5px;
 }
 
@@ -273,7 +275,7 @@ body {
   min-width: 100px;
   /* background-color: #90be6d; */
   border-radius: 6px;
-  padding:5px;
+  padding: 5px;
   margin-right: 3px;
   margin-bottom: 3px;
   transition: background-color 0.3s;
@@ -305,14 +307,14 @@ body {
   /* background-color: orange; */
 }
 
-.why-duolingo-section-block-1 {
+.why-duolingo-section-block {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px;
   min-width: 1065px;
   max-height: 225px;
-  border-bottom: 2px solid #D6D6D6;
+  border-bottom: 2px solid #d6d6d6;
   /* background-color: orangered; */
 }
 
@@ -339,10 +341,9 @@ body {
 .block-1-content-container span {
   margin-top: 20px;
   display: block;
-  color:#777;
+  color: #777;
   font-weight: normal;
   line-height: 1.3;
-  
 }
 
 .see-how-we-do-it {
@@ -352,7 +353,7 @@ body {
   font-size: 15px;
   font-weight: bold;
   color: #5390d9;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
   align-self: flex-start;
   margin-top: 20px;
@@ -363,6 +364,13 @@ body {
   margin-right: 10px;
 }
 
+h1 {
+  color: #3c3c3c;
+  font-size: 24px;
+  line-height: 26px;
+  margin: 0 0 25px;
+}
+
 .modal-window {
   display: flex;
   justify-content: center;
@@ -370,11 +378,11 @@ body {
   text-align: center;
   position: fixed;
   border-radius: 16px;
-  top:40%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  box-shadow: 0 5px 30px rgba(0, 0, 0, .3);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
   width: 600px;
   height: 600px;
   background-color: #fff;
@@ -382,19 +390,19 @@ body {
 }
 
 .overlay {
-  background-color:black;
+  background-color: black;
   opacity: 0.6;
   height: 100vh;
   width: 100vw;
   position: fixed;
-  z-index:99;
+  z-index: 99;
 }
 
 .modal-close {
   cursor: pointer;
   position: absolute;
   display: flex;
-  right:-5px;
+  right: -5px;
   top: -10px;
   justify-content: center;
   align-items: center;
@@ -402,12 +410,75 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50px;
-  background-color: #FFF;
+  background-color: #fff;
   border: 2px solid #777;
   color: #777;
+  z-index: 100;
 }
 
 .modal-close:hover {
-  background-color: #DEE2E6;
+  background-color: #dee2e6;
 }
- 
+
+.video-wrapper {
+  position: relative;
+  /* background-color: #777; */
+  width: 94%;
+  height: 94%;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.duolingo-gamification-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  min-width: 1065px;
+  max-height: 225px;
+  border-bottom: 2px solid #d6d6d6;
+}
+
+.duolingo-gamification-block-one-third-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #61b800;
+}
+
+.duolingo-gamification-block-one-third {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.333333%;
+  height: 100%;
+  background-color: #235390;
+}
+
+.duolingo-gamification-block-one-third.center {
+  padding: 10px;
+}
+
+.duolingo-gamification-block-one-third-item {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+  width: 100%;
+  background-color: #84dc00;
+  border-bottom: 1px solid red;
+}
+
+.duolingo-gamification-block-one-third-item img {
+  display: flex;
+  align-self: flex-start;
+}
+
+
