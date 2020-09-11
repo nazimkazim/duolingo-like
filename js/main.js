@@ -81,6 +81,67 @@ const flags = [
   }
 ];
 
+const footerItems = [
+  {
+    header: "About us",
+    list: [
+      "Courses",
+      "Mission",
+      "Approach",
+      "Team",
+      "Research",
+      "Incubator",
+      "Career",
+      "Press",
+      "Contact us"
+    ]
+  },
+  {
+    header: "Products",
+    list: [
+      "Duolingo",
+      "Duolingo for Schools",
+      "Duolingo English Test",
+      "Duolingo ABC",
+      "Podcast",
+      "Stories",
+      "Disctionary"
+    ]
+  },
+  {
+    header: "Apps",
+    list: [
+      "Duolingo for Android",
+      "Duolingo for iOS",
+      "Duolingo ABC (iOS)"
+    ]
+  },
+  {
+    header: "Help & Support",
+    list: [
+      "Discussion",
+      "Troubleshooting",
+      "Duolingo FAQs",
+      "Schools FAQs",
+      "Duolingo English Test",
+      "FAQs",
+      "Status"
+    ]
+  },
+  {
+    header: "Privacy and Terms",
+    list: [
+      "Community Guidelines",
+      "Troubleshooting",
+      "Terms",
+      "Privacy",
+      'Respecting your "do not sell my info" right',
+      "FAQs",
+      "Status"
+    ]
+  }
+];
+
 const flagsContainer = document.querySelector('.header__bottom_strip_flags_container');
 const flagsModal = document.querySelector('.flags-modal');
 const arrowSlideLeft = document.querySelector('.arrow-slide-left');
@@ -91,11 +152,12 @@ const modalWindow = document.querySelector('.modal-window');
 const overlay = document.querySelector('.overlay');
 const modalClose = document.querySelector('.modal-close');
 const duolingoVideo = document.getElementById("video-duolingo");
+const footerListsContainer = document.querySelector(".lists-container");
 
 let scrollRange = 300;
 let scrollStart = 0;
 
-
+// Create flags modal
 for (let i = 0; i < flags.length; i++) {
   const flagItem = document.createElement('div');
   flagItem.className = "flag-item";
@@ -106,6 +168,25 @@ for (let i = 0; i < flags.length; i++) {
   flagModalItem.className = "flags-modal-item";
   flagModalItem.innerHTML = `<img src="${flags[i].flag}"/><span class="modal-lang-name">${flags[i].lang}</span>`;
   flagsModal.appendChild(flagModalItem);
+}
+
+// Create footer lists
+for (let i = 0; i < footerItems.length; i++) {
+  let header = i.header;
+  let lists = footerItems[i].list;
+  //console.log(lists)
+  const listEl = document.createElement('ul');
+  listEl.className = "list";
+  const headerEl = document.createElement('li');
+  headerEl.innerHTML = header;
+
+  for (let y = 0; y < lists.length; y++) {
+    let itemEl = document.createElement('li');
+    itemEl.className = "item";
+    itemEl.innerHTML = `${lists[y]}`
+    listEl.appendChild(itemEl);
+    footerListsContainer.appendChild(listEl);
+  }
 }
 
 // Slide flags in header to the left
@@ -170,7 +251,7 @@ seeHowWeDoIt.addEventListener('click', () => {
   setTimeout(() => {
     modalWindow.style.display = 'flex';
   }, 300);
-  duolingoVideo.setAttribute('src', 'https://www.youtube.com/embed/SUz6oBiRlxk')
+  duolingoVideo.setAttribute('src', 'https://www.youtube.com/embed/SUz6oBiRlxk');
   overlay.style.display = 'block';
 });
 
