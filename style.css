@@ -28,11 +28,14 @@ body {
 }
 
 .header__navbar {
-  position: relative;
+  position: sticky;
   display: flex;
   justify-content: center;
   height: var(--header-nav-height);
   width: 100%;
+  top: 0;
+  z-index: 99;
+  background-color: #0a4a82;
   /* background-color: wheat; */
 }
 
@@ -759,4 +762,69 @@ h1 {
   color: white;
   font-weight: 700;
   margin-top: 15px;
+}
+
+@media (max-width: 320px) {
+  .header {
+    width: 100vw;
+    height: 1080px;
+  }
+  .header__content__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+  }
+
+  .why-duolingo-section-block {
+    max-width: 320px;
+  }
+
+  .duolingo-gamification-block {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+  }
+
+  .info-container {
+    display: flex;
+    max-width: 320px;
+  }
+
+  .ios-android-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .duolingo-gamification-block-one-third-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .duolingo-plus-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    min-height: 2000px;
+  }
+
+  .lists-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+  }
+
+  .footer-languages-container {
+    display: flex;
+    max-width: 320px;
+  }
+
+  .footer-site-language {
+    max-width: 320px;
+  }
 }
