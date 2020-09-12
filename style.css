@@ -675,8 +675,8 @@ h1 {
   padding: 10px;
   justify-content: center;
   width: 1065px;
-  min-height: 400px;
-  border-bottom:  2px solid grey;
+  min-height: 550px;
+  border-bottom: 2px solid grey;
   /* background-color: #61b800; */
 }
 
@@ -704,6 +704,59 @@ h1 {
   transition: 0.7s;
 }
 
+.item-header {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  padding: 5px;
+  /* background-color: #61b800; */
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  opacity: 0.5;
+  text-decoration: none;
+  color: white !important;
+  transition: 0.7s;
+}
+
 .lists-container .list .item:hover {
   text-decoration: underline;
+}
+
+.footer-site-language {
+  width: 1065px;
+  min-height: 100px;
+  /* background-color: #61b800; */
+}
+
+.footer-languages-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 70%;
+  /* background-color: #5390d9; */
+}
+
+.footer-languages-container .footer-item-lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+  width: auto;
+  margin-right: 10px;
+  height: auto;
+  /* background-color: blue; */
+  font-weight: 700;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.item-footer-lang-header {
+  display: block;
+  font-size: 14px;
+  color: white;
+  font-weight: 700;
+  margin-top: 15px;
 }

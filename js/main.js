@@ -142,6 +142,34 @@ const footerItems = [
   }
 ];
 
+const languages = [
+  'العربية',
+  'Čeština',
+  'Deutsch',
+  'Ελληνικά',
+  'English',
+  'Español',
+  'Français',
+  'हिंदी',
+  'Magyar',
+  'Bahasa',
+  'Indonesia',
+  'Italiano',
+  '日本語',
+  '한국어',
+  'Nederlands',
+  'Polski',
+  'Português',
+  'Română',
+  'Русский',
+  'ภาษาไทย',
+  'Türkçe',
+  'Українською',
+  'Tiếng Việt',
+  '中文'
+];
+
+
 const flagsContainer = document.querySelector('.header__bottom_strip_flags_container');
 const flagsModal = document.querySelector('.flags-modal');
 const arrowSlideLeft = document.querySelector('.arrow-slide-left');
@@ -153,6 +181,7 @@ const overlay = document.querySelector('.overlay');
 const modalClose = document.querySelector('.modal-close');
 const duolingoVideo = document.getElementById("video-duolingo");
 const footerListsContainer = document.querySelector(".lists-container");
+const footerLanguagesContainer = document.querySelector(".footer-languages-container");
 
 let scrollRange = 300;
 let scrollStart = 0;
@@ -172,21 +201,31 @@ for (let i = 0; i < flags.length; i++) {
 
 // Create footer lists
 for (let i = 0; i < footerItems.length; i++) {
-  let header = i.header;
+  let header = footerItems[i].header;
   let lists = footerItems[i].list;
   //console.log(lists)
   const listEl = document.createElement('ul');
   listEl.className = "list";
   const headerEl = document.createElement('li');
+  headerEl.className = 'item-header';
   headerEl.innerHTML = header;
+  listEl.appendChild(headerEl);
 
   for (let y = 0; y < lists.length; y++) {
     let itemEl = document.createElement('li');
     itemEl.className = "item";
-    itemEl.innerHTML = `${lists[y]}`
+    itemEl.innerHTML = `${lists[y]}`;
     listEl.appendChild(itemEl);
     footerListsContainer.appendChild(listEl);
   }
+}
+
+// Create footer languages
+for (let i = 0; i < languages.length; i++) {
+  let item = document.createElement('a');
+  item.className = 'footer-item-lang';
+  item.innerHTML = languages[i];
+  footerLanguagesContainer.appendChild(item);
 }
 
 // Slide flags in header to the left
