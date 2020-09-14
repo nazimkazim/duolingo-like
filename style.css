@@ -775,7 +775,24 @@ h1 {
 *************
 *************/
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 420px) {
+  .lists-container {
+    display: grid !important;
+    grid-template-columns:  1fr 1fr;
+    /* background-color: #61b800; */
+  }
+
+  .lists-container .list {
+    width: 15px;
+  }
+
+  .lists-container .list .item {
+    width: 100%;
+    /* background-color: #2f004f; */
+  }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
   .header {
     width: 100vw;
     height: 1080px;
@@ -854,9 +871,10 @@ h1 {
   .duolingo-gamification-block {
     display: flex;
     flex-direction: column;
-    width: 320px;
+    width: 100%;
     padding: 10px;
     align-items: center;
+    text-align: center;
   }
 
   .info-container {
@@ -955,6 +973,11 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .lists-container .list {
+    width: auto;
   }
 
   .footer-site-language {
@@ -965,9 +988,9 @@ h1 {
     height: auto;
   }
 
-  
-
   .header__navbar__container__item.dropdown {
     display: none;
   }
 }
+
+
