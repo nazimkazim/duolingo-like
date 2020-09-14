@@ -775,7 +775,18 @@ h1 {
 *************
 *************/
 
-@media (min-width: 420px) {
+@media (min-width: 488px) and (max-width: 768px) { 
+  .ios-android-container {
+    display: flex !important;
+    align-items: center;
+    background-color: #29d5ff;
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 420px) and (max-width: 768px) {
   .lists-container {
     display: grid !important;
     grid-template-columns:  1fr 1fr;
@@ -791,6 +802,8 @@ h1 {
     /* background-color: #2f004f; */
   }
 }
+
+
 
 @media (min-width: 320px) and (max-width: 768px) {
   .header {
@@ -877,11 +890,6 @@ h1 {
     text-align: center;
   }
 
-  .info-container {
-    display: flex;
-    max-width: 320px;
-  }
-
   .ios-android-container {
     display: flex;
     flex-direction: column;
@@ -931,6 +939,7 @@ h1 {
   .info-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
     padding: 0;
   }
 
