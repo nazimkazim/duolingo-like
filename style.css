@@ -516,7 +516,10 @@ h1 {
   margin-bottom: 60px;
 }
 
-.duolingo-plus-block {
+.duolingo-plus-block-1,
+.duolingo-plus-block-2,
+.duolingo-plus-block-3,
+.duolingo-plus-block-4 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -526,7 +529,9 @@ h1 {
   border-bottom: 2px solid #d6d6d6;
 }
 
-.duolingo-plus-block .image-container {
+.duolingo-plus-block-1,
+.duolingo-plus-block-2,
+.duolingo-plus-block-3 .image-container {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -537,17 +542,14 @@ h1 {
   flex: 1 1 30%;
 }
 
-.duolingo-plus-block .image-container img {
+.duolingo-plus-block-1,
+.duolingo-plus-block-2,
+.duolingo-plus-block-3 .image-container img {
   width: 70%;
 }
 
-.duolingo-plus-block .info-container {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  height: 100%;
-  /* background-color: #61b800; */
-  flex: 1 1 70%;
+.info-container {
+  padding: 30px;
 }
 
 .info-container .info-container-header {
@@ -557,15 +559,15 @@ h1 {
   margin-top: 40px;
 }
 
-.duolingo-plus-block .info-container p {
+.regular {
   font-size: 14px;
   color: #777777;
   margin-top: 10px;
+  margin-bottom: 10px;
   line-height: 1.6;
-  margin-left: 10px;
 }
 
-.duolingo-plus-block .info-container .learn-more {
+.learn-more {
   cursor: pointer;
   font-size: 15px;
   font-weight: 700;
@@ -575,7 +577,10 @@ h1 {
   transition: 0.6s;
 }
 
-.duolingo-plus-block .info-container .learn-more:hover {
+.duolingo-plus-block-1,
+.duolingo-plus-block-2,
+.duolingo-plus-block-3,
+.duolingo-plus-block-4 .info-container .learn-more:hover {
   color: #5390d9;
 }
 
@@ -764,6 +769,12 @@ h1 {
   margin-top: 15px;
 }
 
+/************
+*************
+  MEDIA QUERY
+*************
+*************/
+
 @media (max-width: 320px) {
   .header {
     width: 100vw;
@@ -771,18 +782,81 @@ h1 {
   }
   .header__content__info {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     max-width: 320px;
   }
 
+  .header__content__info__desc_container {
+    width: 100%;
+  }
+
+  .header__content {
+    padding: 10px;
+  }
+
+  .main_header {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .header__content__info__image_container img {
+    width: 190px;
+  }
+
+  .header__content__button {
+    width: 300px;
+  }
+
+  .header__bottom_strip {
+    display: none;
+  }
+
   .why-duolingo-section-block {
+    display: flex;
+    flex-direction: column;
     max-width: 320px;
+    min-height: 400px;
+    padding: 0;
+    min-height: 500px;
+  }
+
+  .block-1-image-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .block-1-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    max-width: 300px;
+  }
+
+  .block-1-content-container h1 {
+    text-align: center;
+  }
+
+  .block-1-content-container span {
+    text-align: left;
+  }
+
+  .see-how-we-do-it {
+    margin: 20px auto;
+  }
+
+  .why-duolingo-section {
+    padding: 0;
   }
 
   .duolingo-gamification-block {
     display: flex;
     flex-direction: column;
     width: 320px;
+    padding: 10px;
+    align-items: center;
   }
 
   .info-container {
@@ -793,17 +867,47 @@ h1 {
   .ios-android-container {
     display: flex;
     flex-direction: column;
+    min-width: 100%;
+  }
+
+  .duolingo-gamification-block-one-third {
+    width: 100%;
   }
 
   .duolingo-gamification-block-one-third-container {
     display: flex;
     flex-direction: column;
+    flex-direction: column-reverse;
   }
 
-  .duolingo-plus-block {
+  .duolingo-gamification-block-one-third-container .center {
+    order: 1;
+  }
+
+  .duolingo-plus-block-1,
+  .duolingo-plus-block-2,
+  .duolingo-plus-block-3,
+  .duolingo-plus-block-4 {
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    align-items: center;
+    text-align: center;
+    /* background-color: #235390; */
+    width: 100%;
+  }
+
+  .duolingo-plus-block-2 {
+    flex-flow: column-reverse;
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .info-container .learn-more {
+    font-size: 14px;
   }
 
   .footer {
@@ -821,10 +925,15 @@ h1 {
 
   .footer-languages-container {
     display: flex;
-    max-width: 320px;
+    max-width: 320px !important;
+    height: auto;
   }
 
   .footer-site-language {
     max-width: 320px;
+  }
+
+  .header__navbar__container__item.dropdown {
+    display: none;
   }
 }
