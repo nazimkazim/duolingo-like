@@ -474,7 +474,7 @@ h1 {
 }
 
 .duolingo-gamification-block-one-third.center img {
-  width: 80%;
+  width: 60%;
   margin-bottom: 40px;
 }
 
@@ -550,6 +550,7 @@ h1 {
 
 .info-container {
   padding: 30px;
+  margin-bottom: 30px;
 }
 
 .info-container .info-container-header {
@@ -721,7 +722,7 @@ h1 {
   font-size: 18px;
   font-weight: 700;
   line-height: 1.5;
-  opacity: 0.5;
+  opacity: 1;
   text-decoration: none;
   color: white !important;
   transition: 0.7s;
@@ -775,21 +776,177 @@ h1 {
 *************
 *************/
 
-@media (min-width: 488px) and (max-width: 768px) { 
+@media (min-width: 981px) and (max-width: 1800px) {
+  .header__bottom_strip {
+    display: none;
+  }
+
+  .header {
+    width: 100vw;
+    height: 1080px;
+  }
+  .header__content__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 320px;
+  }
+
+  .header__content__info__desc_container {
+    width: 100%;
+  }
+
+  .header__content {
+    padding: 10px;
+  }
+
+  .why-duolingo-section-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 400px;
+    padding: 0;
+    min-height: 500px;
+  }
+
+  .duolingo-plus-block-1,
+  .duolingo-plus-block-2,
+  .duolingo-plus-block-3,
+  .duolingo-plus-block-4 {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .duolingo-gamification-block-one-third.center img {
+    width: 40%;
+    margin-bottom: 40px;
+  }
+
+  .duolingo-gamification-block-one-third {
+    width: 100%;
+  }
+
+  .duolingo-gamification-block-one-third-container {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+
+  .duolingo-gamification-block-one-third-container .center {
+    order: 1;
+  }
+
+  .lists-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    /* background-color: #61b800; */
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .footer .header {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .item-footer-lang-header {
+    margin-bottom: 10px;
+  }
+
+  .narrow {
+    margin-right: 0px;
+    display: flex;
+    align-self: center;
+    width: 152px;
+  }
+
+  .footer .list {
+    margin-bottom: 15px;
+  }
+
+  .lists-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .lists-container .list {
+    width: auto;
+  }
+
+  .footer-site-language {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    height: auto;
+  }
+}
+
+@media (min-width: 590px) and (max-width: 980px) {
+  .lists-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    /* background-color: #61b800; */
+  }
+}
+
+@media (min-width: 610px) and (max-width: 980px) {
+  .block-1-content-container {
+    max-width: 600px !important;
+  }
+
+  .duolingo-gamification-block-one-third-container {
+    max-width: 600px;
+  }
+
+  .info-container {
+    max-width: 600px !important;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 980px) {
+  .lists-container {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    /* background-color: #61b800; */
+  }
+}
+
+@media (min-width: 488px) and (max-width: 980px) {
   .ios-android-container {
     display: flex !important;
-    align-items: center;
-    background-color: #29d5ff;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center !important;
+    /* background-color: #29d5ff; */
     width: 100%;
     height: auto;
     margin-left: 0;
   }
+
+  .ios-android-container .item {
+    margin-bottom: 0 !important;
+  }
 }
 
-@media (min-width: 420px) and (max-width: 768px) {
+@media (min-width: 420px) and (max-width: 980px) {
   .lists-container {
     display: grid !important;
-    grid-template-columns:  1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     /* background-color: #61b800; */
   }
 
@@ -803,9 +960,7 @@ h1 {
   }
 }
 
-
-
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 980px) {
   .header {
     width: 100vw;
     height: 1080px;
@@ -846,7 +1001,7 @@ h1 {
   .why-duolingo-section-block {
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    width: 100%;
     min-height: 400px;
     padding: 0;
     min-height: 500px;
@@ -862,7 +1017,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    max-width: 300px;
+    max-width: 80%;
   }
 
   .block-1-content-container h1 {
@@ -910,6 +1065,7 @@ h1 {
     display: flex;
     flex-direction: column;
     flex-direction: column-reverse;
+    width: 90%;
   }
 
   .duolingo-gamification-block-one-third-container .center {
@@ -939,7 +1095,7 @@ h1 {
   .info-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     padding: 0;
   }
 
@@ -1001,5 +1157,3 @@ h1 {
     display: none;
   }
 }
-
-
