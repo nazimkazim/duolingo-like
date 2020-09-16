@@ -776,9 +776,9 @@ h1 {
 *************
 *************/
 
-@media (min-width: 981px) and (max-width: 1800px) {
+@media (min-width: 1066px) and (max-width: 1800px) {
   .header__bottom_strip {
-    display: none;
+    display: flex;
   }
 
   .header {
@@ -786,11 +786,11 @@ h1 {
     height: 1080px;
   }
   .header__content__info {
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    max-width: 320px;
+    flex-direction: row;
+    max-width: 100%;
   }
 
   .header__content__info__desc_container {
@@ -816,11 +816,11 @@ h1 {
   .duolingo-plus-block-4 {
     width: 90%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .duolingo-gamification-block-one-third.center img {
-    width: 40%;
+    width: 80%;
     margin-bottom: 40px;
   }
 
@@ -830,13 +830,8 @@ h1 {
 
   .duolingo-gamification-block-one-third-container {
     display: flex;
-    flex-direction: column;
-    flex-direction: column-reverse;
+    flex-direction: row;
     width: 90%;
-  }
-
-  .duolingo-gamification-block-one-third-container .center {
-    order: 1;
   }
 
   .lists-container {
@@ -855,10 +850,11 @@ h1 {
 
   .footer .header {
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    height: auto;
-    width: 100%;
+    justify-content: space-between;
+    width: 732px;
+    height: 94px;
+    margin-top: 90px;
+    /* background-color: #29D5FF; */
   }
 
   .item-footer-lang-header {
@@ -868,7 +864,7 @@ h1 {
   .narrow {
     margin-right: 0px;
     display: flex;
-    align-self: center;
+    align-self: flex-start;
     width: 152px;
   }
 
@@ -896,7 +892,7 @@ h1 {
   }
 }
 
-@media (min-width: 590px) and (max-width: 980px) {
+@media (min-width: 590px) and (max-width: 1065px) {
   .lists-container {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr !important;
@@ -904,7 +900,7 @@ h1 {
   }
 }
 
-@media (min-width: 610px) and (max-width: 980px) {
+@media (min-width: 610px) and (max-width: 1065px) {
   .block-1-content-container {
     max-width: 600px !important;
   }
@@ -918,7 +914,7 @@ h1 {
   }
 }
 
-@media (min-width: 760px) and (max-width: 980px) {
+@media (min-width: 760px) and (max-width: 1065px) {
   .lists-container {
     display: grid !important;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
@@ -926,7 +922,7 @@ h1 {
   }
 }
 
-@media (min-width: 488px) and (max-width: 980px) {
+@media (min-width: 488px) and (max-width: 1065px) {
   .ios-android-container {
     display: flex !important;
     flex-direction: row !important;
@@ -943,7 +939,7 @@ h1 {
   }
 }
 
-@media (min-width: 420px) and (max-width: 980px) {
+@media (min-width: 420px) and (max-width: 1065px) {
   .lists-container {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
@@ -960,7 +956,7 @@ h1 {
   }
 }
 
-@media (min-width: 320px) and (max-width: 980px) {
+@media (min-width: 320px) and (max-width: 1065px) {
   .header {
     width: 100vw;
     height: 1080px;
@@ -979,6 +975,7 @@ h1 {
 
   .header__content {
     padding: 10px;
+    height: 100%;
   }
 
   .main_header {
