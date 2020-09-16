@@ -1,82 +1,82 @@
 const flags = [
   {
-    flag: '../assets/flags/japan.png',
+    flag: '../assets/japan.png',
     lang: 'japanese'
   },
   {
-    flag: '../assets/flags/russia.png',
+    flag: '../assets/russia.png',
     lang: 'russian'
   },
   {
-    flag: '../assets/flags/china.png',
+    flag: '../assets/china.png',
     lang: 'chinese'
   },
   {
-    flag: '../assets/flags/denmark.png',
+    flag: '../assets/denmark.png',
     lang: 'danish'
   },
   {
-    flag: '../assets/flags/france.png',
+    flag: '../assets/france.png',
     lang: 'french'
   },
   {
-    flag: '../assets/flags/germany.png',
+    flag: '../assets/germany.png',
     lang: 'german'
   },
   {
-    flag: '../assets/flags/italy.png',
+    flag: '../assets/italy.png',
     lang: 'italian'
   },
   {
-    flag: '../assets/flags/norway.png',
+    flag: '../assets/norway.png',
     lang: 'norwegian'
   },
   {
-    flag: '../assets/flags/poland.png',
+    flag: '../assets/poland.png',
     lang: 'polish'
   },
   {
-    flag: '../assets/flags/romania.png',
+    flag: '../assets/romania.png',
     lang: 'romanian'
   },
   {
-    flag: '../assets/flags/saudi-arabia.png',
+    flag: '../assets/saudi-arabia.png',
     lang: 'arabic'
   },
   {
-    flag: '../assets/flags/south-korea.png',
+    flag: '../assets/south-korea.png',
     lang: 'korean'
   },
   {
-    flag: '../assets/flags/spain.png',
+    flag: '../assets/spain.png',
     lang: 'spanish'
   },
   {
-    flag: '../assets/flags/sweden.png',
+    flag: '../assets/sweden.png',
     lang: 'swedish'
   },
   {
-    flag: '../assets/flags/thailand.png',
+    flag: '../assets/thailand.png',
     lang: 'thai'
   },
   {
-    flag: '../assets/flags/turkey.png',
+    flag: '../assets/turkey.png',
     lang: 'turkish'
   },
   {
-    flag: '../assets/flags/uk.png',
+    flag: '../assets/uk.png',
     lang: 'english'
   },
   {
-    flag: '../assets/flags/ukraine.png',
+    flag: '../assets/ukraine.png',
     lang: 'ukrainian'
   },
   {
-    flag: '../assets/flags/vietnam.png',
+    flag: '../assets/vietnam.png',
     lang: 'vietnamese'
   },
   {
-    flag: '../assets/flags/iran.png',
+    flag: '../assets/iran.png',
     lang: 'persian'
   }
 ];
