@@ -1,82 +1,82 @@
 const flags = [
   {
-    flag: '../assets/japan.png',
+    flag: '/assets/japan.png',
     lang: 'japanese'
   },
   {
-    flag: '../assets/russia.png',
+    flag: '/assets/russia.png',
     lang: 'russian'
   },
   {
-    flag: '../assets/china.png',
+    flag: '/assets/china.png',
     lang: 'chinese'
   },
   {
-    flag: '../assets/denmark.png',
+    flag: '/assets/denmark.png',
     lang: 'danish'
   },
   {
-    flag: '../assets/france.png',
+    flag: '/assets/france.png',
     lang: 'french'
   },
   {
-    flag: '../assets/germany.png',
+    flag: '/assets/germany.png',
     lang: 'german'
   },
   {
-    flag: '../assets/italy.png',
+    flag: '/assets/italy.png',
     lang: 'italian'
   },
   {
-    flag: '../assets/norway.png',
+    flag: '/assets/norway.png',
     lang: 'norwegian'
   },
   {
-    flag: '../assets/poland.png',
+    flag: '/assets/poland.png',
     lang: 'polish'
   },
   {
-    flag: '../assets/romania.png',
+    flag: '/assets/romania.png',
     lang: 'romanian'
   },
   {
-    flag: '../assets/saudi-arabia.png',
+    flag: '/assets/saudi-arabia.png',
     lang: 'arabic'
   },
   {
-    flag: '../assets/south-korea.png',
+    flag: '/assets/south-korea.png',
     lang: 'korean'
   },
   {
-    flag: '../assets/spain.png',
+    flag: '/assets/spain.png',
     lang: 'spanish'
   },
   {
-    flag: '../assets/sweden.png',
+    flag: '/assets/sweden.png',
     lang: 'swedish'
   },
   {
-    flag: '../assets/thailand.png',
+    flag: '/assets/thailand.png',
     lang: 'thai'
   },
   {
-    flag: '../assets/turkey.png',
+    flag: '/assets/turkey.png',
     lang: 'turkish'
   },
   {
-    flag: '../assets/uk.png',
+    flag: '/assets/uk.png',
     lang: 'english'
   },
   {
-    flag: '../assets/ukraine.png',
+    flag: '/assets/ukraine.png',
     lang: 'ukrainian'
   },
   {
-    flag: '../assets/vietnam.png',
+    flag: '/assets/vietnam.png',
     lang: 'vietnamese'
   },
   {
-    flag: '../assets/iran.png',
+    flag: '/assets/iran.png',
     lang: 'persian'
   }
 ];
