@@ -382,7 +382,7 @@ h1 {
 }
 
 .modal-window {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -401,6 +401,7 @@ h1 {
 
 .overlay {
   background-color: black;
+  display: none;
   opacity: 0.6;
   height: 100vh;
   width: 100vw;
